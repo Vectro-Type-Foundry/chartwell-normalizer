@@ -1,70 +1,15 @@
-# Getting Started with Create React App
+# Chartwell Normalizer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Use the tool on the website [chartwell-normalizer.vectrotype.com](https://chartwell-normalizer.vectrotype.com).
 
-## Available Scripts
+### What is this?
+[Chartwell](https://www.vectrotype.com/chartwell) only supports values from 0-100. This can be a problem if your data has values that do not fit within this range. To get around this, you can normalize your data. Essentially this scales the data to fit within the acceptable range and preserves the relationships between each value.
 
-In the project directory, you can run:
+For example, if you have values of “50+100+200”, you would need to support at least a range of 0-200. If we divide all our values by 2, we’ll end up with values of “25+50+100”. All values now lie within the supported range of 0-100, and still retain the proportional relationship to each other.
 
-### `npm start`
+The above calculator does all the math for you, so you don’t have to figure out the optimum value to divide by. Just set the minimum and maximum possible values, then enter your data string, with values separated by a “+”. The “normalized data” can then be used for Chartwell.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### About Chartwell
+Chartwell is a set of fonts that make it easy to create charts. It uses OpenType features are used to interpret and visualize the data. The data remains as editable text, allowing for painless updates.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Chartwell is available for licensing exclusively at [Vectro Type Foundry](https://www.vectrotype.com/chartwell).
