@@ -1,0 +1,21 @@
+@mixin declare_font($path, $family, $weight:normal, $style:normal, $format: 'woff2') {
+  @font-face {
+    font-family: $family;
+    src: url('#{$fonts-path}#{$path}.#{$format}') format('#{$format}');
+    font-weight: $weight;
+    font-display: block;
+    font-style: $style;
+  }
+}
+@mixin declare_font_with_fallback($path, $family, $weight, $style, $format, $path2, $format2) {
+  @font-face {
+    font-family: $family;
+    src: url('#{$fonts-path}#{$path}.#{$format}') format('#{$format}'),
+      url('#{$fonts-path}#{$path2}.#{$format2}') format('#{$format2}');
+    font-weight: $weight;
+    font-display: block;
+    font-style: $style;
+  }
+}
+@include declare_font('VCTRMonov0.11-Regular', 'VCTR Mono Web', 400, normal, 'woff2');
+@include declare_font('VCTRMonov0.11-Bold', 'VCTR Mono Web', bold, normal, 'woff2');

@@ -1,0 +1,65 @@
+input[type=text], input[type=password], input[type=email], input[type=url], textarea {
+  position: relative;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: .5em .7em;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  outline: none;
+  font-size: 1.8rem;
+  line-height: 1.3em;
+  font-family: $font-body;
+  color: $c-dark;
+  background-color: $c-gray-10;
+  &:focus {
+    border-color: $c-gray-5;
+  }
+  &::placeholder {
+    color: $c-gray-4;
+  }
+}
+.input, .form-input {
+  margin-bottom: 3rem;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+textarea {
+  // min-height: 
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: .25em;
+  font-size: 1.4rem;
+}
+
+.form--2cols {
+  @include clearfix;
+  
+  .form-input {
+    float: left;
+    width: 46%;
+    margin-left: 0;
+    margin-right: 4%;
+
+    &:last-of-type {
+      margin-left: 4%;
+      margin-right: 0;
+    }
+  }
+}
+
+.error {
+  font-size: 1.6rem;
+  background-color: rgba($c-red, .1);
+  color: $c-red;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 2px;
+}
